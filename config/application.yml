@@ -1,0 +1,45 @@
+
+# This file is used by the "figaro" gem to allow you to store and use
+# environment variables in the app without having to set them via the
+# command line each time you run the app in development. Another advantage
+# is that you can make changes in a production environment (such as Heroku)
+# by simply changing the value of the environment variable, as opposed to
+# making code changes and having to push them to apply the new setting.
+# Read more about figaro here: https://github.com/laserlemon/figaro
+
+# Note that changes to this file require a server restart to take effect.
+
+SENDER_EMAIL: 'info@example.com'
+
+###########################
+#
+# SETTINGS FOR DEVELOPMENT
+#
+###########################
+development:
+  DEFAULT_PER_PAGE: '30'
+  MAX_PER_PAGE: '50'
+
+###############################################################################
+#
+# SETTINGS FOR PRODUCTION.
+#
+# Run `figaro heroku:set -e production -a your_app_name` to set them on Heroku.
+#
+###############################################################################
+production:
+  DEFAULT_PER_PAGE: '30'
+  MAX_PER_PAGE: '50'
+  EXPIRES_IN: '5'
+  TLD_LENGTH: '2'
+  ENABLE_HTTPS: 'yes'
+
+###########################################
+#
+# SETTINGS FOR TESTS. PLEASE DO NOT MODIFY.
+#
+###########################################
+test:
+  DEFAULT_PER_PAGE: '30'
+  MAX_PER_PAGE: '50'
+  ADMIN_APP_TOKEN: testing123
