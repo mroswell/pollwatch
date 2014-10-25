@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021235204) do
+ActiveRecord::Schema.define(version: 20141025161756) do
 
   create_table "polls", force: true do |t|
     t.string   "location_name"
     t.string   "address"
-    t.integer  "election_year"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at"
@@ -24,5 +23,19 @@ ActiveRecord::Schema.define(version: 20141021235204) do
   end
 
   add_index "polls", ["latitude", "longitude"], :name => "index_polls_on_latitude_and_longitude"
+
+  create_table "reports", force: true do |t|
+    t.string   "election_id"
+    t.text     "problems"
+    t.text     "comment"
+    t.string   "contact_method"
+    t.time     "time_happened"
+    t.date     "election_year"
+    t.integer  "poll_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reports", ["poll_id"], :name => "index_reports_on_poll_id"
 
 end

@@ -3,7 +3,6 @@ class CreatePolls < ActiveRecord::Migration
     create_table :polls do |t|
       t.string :location_name
       t.string :address
-      t.integer :election_year
       t.float :latitude
       t.float :longitude
 

@@ -1,5 +1,17 @@
 class Poll < ActiveRecord::Base
+  has_many :reports, dependent: :destroy
+  # geocoded_by :fullAddress
 
-  scope :current_election_year, ->{where(election_year: Time.now.year)}
+  # after_validation :geocode
 
+
+  # def fullAddress
+  #   # Handle the case where the address is a hash
+  #   if address['line1'].present?
+  #     "#{address['line1']}, #{address['city']}, #{address['state']}, #{address['zip']}"
+  #   else
+  #     # Address is a string
+  #     address
+  #   end
+  # end
 end
