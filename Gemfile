@@ -30,6 +30,8 @@ gem "enumerize"
 gem "bootstrap_form"
 gem "activerecord-postgis-adapter"
 gem "geocoder"
+gem "i18n-js"
+gem "localeapp"
 group :production, :staging do
   gem "rails_12factor"
   gem "rack-cache", require: "rack/cache"
