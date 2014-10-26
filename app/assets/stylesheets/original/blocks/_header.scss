@@ -1,0 +1,13 @@
+@import "bootstrap";
+
+#header{
+  .brand{
+    img{width:35px;}
+  }
+  li > a{
+    margin-top:7px;
+  }
+  li:first-child > a{
+    margin-top:0;
+  }
+}

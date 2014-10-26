@@ -1,0 +1,8 @@
+@import "../variables";
+
+.addThickDarkLineTop{
+  border-top: solid 4px $black;
+}
+.addThinDarkLineTop{
+  border-top: solid 1px $gray;
+}

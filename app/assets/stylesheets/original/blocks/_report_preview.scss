@@ -1,0 +1,89 @@
+@import "../variables";
+
+// block/group
+.report{
+  .report-preview-block{
+    border-top: solid 1px $black;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+
+
+  .problem-icons{
+    margin-left:0;
+  }
+
+  .shareBox{
+    position:relative;
+    display: none;
+    left:-5px;
+
+    .providers{
+      position:absolute;
+      width:40px;
+      right:-8px;
+
+      a{
+        display:block;
+        float:left;
+        height:20px;
+        width:20px;
+        background:#efefef;
+        text-align:center;
+        padding-top:2px;
+      }
+      .facebook{
+        background:rgb(59, 89, 152);
+        color:white;
+      }
+      .twitter{
+        background:rgb(0, 160, 209);
+        color:white;
+      }
+    }
+  }
+
+
+  .comment{
+    font-size: 24px;
+    line-height: 1.3em;
+    margin-bottom: 5px;
+    font-family: Times New Roman;
+
+    &:before {
+      display: block;
+      float: left;
+      margin: -10px 5px 0 -20px;
+      content: url("/assets/open-quote.svg");
+    }
+    &:after {
+      content: none;
+      /* could be content:close-quote; but lets keep it clean*/
+    }
+  }
+
+  .bottomRow{
+    margin-top:10px;
+    img{
+      margin-top:-4px;
+    }
+
+  }
+  .meta{
+    opacity: .3;
+    &:hover{
+      opacity: .9;
+    }
+    & > div {
+      border-right: solid 1px #efefef;
+      margin-right:5px;
+      padding-right:5px;
+
+      &:last-child{
+        border:none;
+        margin-right:0;
+        padding-right:0;
+      }
+    }
+  }
+}

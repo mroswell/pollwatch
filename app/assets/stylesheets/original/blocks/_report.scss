@@ -1,0 +1,48 @@
+//= depend_on_asset "dots.png"
+//
+@import "bootstrap";
+
+[data-role="screen"]{
+  display:none;
+  min-height:500px;
+  &.active{
+    display:block;
+  }
+}
+#reports{
+  margin-top:10px;
+
+  .loadMoreBtn{
+    display:block;
+    @include hide-text();
+    background: image-url("dots.png") center center no-repeat;
+    height: 17px;
+  }
+}
+#vizScreen{
+  .report{
+    max-width:600px;
+  }
+
+}
+#reportScreen{
+  .report{
+    margin-left: 0;
+  }
+  .content{
+    float:left;
+    min-width:300px;
+  }
+  .poll{
+    width:245px;
+    margin:0;
+    float:left;
+
+  }
+  .map{
+    margin-bottom:10px;
+  }
+}
+
+
+

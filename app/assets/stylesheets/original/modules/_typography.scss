@@ -1,0 +1,36 @@
+@import "../variables";
+
+h2{
+  border-top: solid 3px $black;
+}
+h3{
+  font-size: 22px;
+  color: $red !important;
+}
+h4{
+  border-top: solid 2px $black;
+}
+h5{
+  border-top: solid 1px $black;
+}
+
+p{
+  &.p1{
+    font-size: 20px;
+    line-height:1.3em;
+    color: $gray;
+    text-align: left;
+  }
+  &.p2{
+    font-size: 16px;
+    line-height:1.5em;
+    color: $gray;
+    text-align: left;
+  }
+  &.p3{
+    font-size: 12px;
+    line-height:1.5em;
+    color: $gray;
+    text-align: left;
+  }
+}

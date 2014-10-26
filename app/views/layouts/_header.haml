@@ -1,0 +1,16 @@
+#header
+  #homeNavbarBlock.navbar.navbar-inverse.navbar-fixed
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .row
+          .span12
+            .nav-collapse.collapse
+              %ul.nav{style: "margin-right:-25px"}
+                %li=link_to(image_tag("header_icon.png"), "/", class: "brand")
+                %li=link_to "About", "/about"
+                %li=link_to "Results Map", "/viz"
+                %li=link_to "Blog", "http://pollwatchusa.tumblr.com/", {target: "_blank"}

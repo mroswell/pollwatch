@@ -1,0 +1,12 @@
+@import "../variables";
+.about-teamMember{
+  h3{
+    margin-top:0;
+    padding-top:0;
+
+  }
+  .p2{
+    border-top: solid 1px $gray;
+    margin-bottom:20px;
+  }
+}

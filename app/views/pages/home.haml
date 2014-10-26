@@ -1,2 +1,32 @@
-%h1=translate "homepage.title"
+.container
+  .row
+    .col-lg-6
+      .home-logo-block{style: "text-align:right;"}
+        =link_to(image_tag("logo.png"), "/")
+      .home-slogan-block.clearfix{style: "text-align:right"}
+        %h1
+          =translate "pages.home.slogan"
+          %br
+          %small
+            =translate "pages.home.tagline"
+      .home-calloutBtns-module.clearfix.addThinDarkLineTop{style: "padding-top: 5px;margin-top:204px"}
+        =link_to translate("pages.home.cta1"), "/viz", class: "btn btn-flat-red pull-right span2", style: "margin-left:5px"
+        =link_to translate("pages.home.cta2"), "http://pollwatch.us", target: "_blank", class: "btn btn-flat-red span2 pull-right", style: "margin-left:5px"
 
+      .share-widgets-module.clearfix
+        #shareWidgets.pull-right=render partial: "widgets/share"
+
+    .col-lg-6
+      .home-pictureCallout-module.hidden-phone
+        =link_to image_tag("solong.jpg"), "http://pollwatch.us", target: "_blank"
+      .home-smsCallout-module.addThinDarkLineTop{style: "margin: 20px 0"}
+        .col-lg-5{style: "margin-left:0;margin-top:10px"}
+          %span.label.label-info.pull-left{style:"margin-right:5px"}
+            Tip
+          %small.muted.pull-left{style: "font-size: 11px;width:400px"}
+            =translate("pages.home.sms")
+
+  .row
+    .col-lg-6.home-resultsCallout-module
+      %h2=translate("pages.home.cta3")
+      =link_to image_tag('map-prev.png'), '/viz', class: 'map-pic'

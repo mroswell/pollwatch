@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       get 'reports_in_zip'
     end
   end
-  
+
+  get "/viz(*screens)" => "pages#viz"
+  get "/about" => "pages#about"
+  # Actions
+  post "/signup" => "pages#signup"
+
 	root to: 'pages#home'
 end

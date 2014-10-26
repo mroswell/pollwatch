@@ -1,0 +1,37 @@
+@import "bootstrap/mixins";
+@import "../variables";
+
+.btn.btn-flat-blue{
+  background: $blueDark;
+  border:none;
+  border-radius: 1px;
+  color: white;
+  text-shadow: none;
+  padding:5px 25px;
+  margin-bottom: 5px;
+
+  &:hover{
+    background: $linkColorHover;
+    color: white;
+  }
+}
+
+.btn.btn-flat-red{
+  background: $red;
+  border:none;
+  border-radius: 1px;
+  color: white;
+  text-shadow: none;
+  padding:5px 25px;
+  margin-bottom: 5px;
+
+  &:hover{
+    background: darken($red, 10%);
+    color: white;
+  }
+}
+
+.stButton .stFb, .stButton .stTwbutton, .stButton .stMainServices{
+  height:20px !important;
+}
+

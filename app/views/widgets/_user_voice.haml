@@ -1,0 +1,9 @@
+-content_for :javascript_includes do
+  -if Rails.env.production?
+    :javascript
+      var uvOptions = {};
+      (function() {
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/3DaT45jgEKowptWZ8xfpiQ.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();

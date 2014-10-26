@@ -1,0 +1,43 @@
+//=depend_on_asset "other.svg"
+//=depend_on_asset "noproblems.svg"
+//=depend_on_asset "voteinplace.svg"
+//=depend_on_asset "noballots.svg"
+//=depend_on_asset "cantvote.svg"
+//=depend_on_asset "language.svg"
+//=depend_on_asset "time.svg"
+
+
+[class^="problem-icon-"]{
+  background: image-url("other.svg") left top no-repeat;
+  display:block;
+  width:30px;
+  height:35px;
+  float:left;
+  margin-right:5px;
+  opacity: .4;
+  &:hover{opacity: 1;}
+}
+.problem-icon-noproblems{
+  background: image-url("noproblems.svg") left top no-repeat;
+}
+.problem-icon-voteinplace{
+  background: image-url("voteinplace.svg") left top no-repeat;
+}
+.problem-icon-noballots{
+  background: image-url("noballots.svg") left top no-repeat;
+}
+.problem-icon-cantvote{
+  width:35px;
+  background: image-url("cantvote.svg") left top no-repeat;
+}
+.problem-icon-language{
+  width:50px;
+  background: image-url("language.svg") left top no-repeat;
+}
+.problem-icon-time{
+  background: image-url("time.svg") left top no-repeat;
+}
+.problem-icon-other{
+  background: image-url("other.svg") left top no-repeat;
+}
+

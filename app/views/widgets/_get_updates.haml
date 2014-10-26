@@ -1,0 +1,9 @@
+.span6.home-getUpdates-module
+  %h2=translate("pages.home.get_updates")
+  =form_for @signup, url: signup_path, method: :post, html:{class: "clearfix"} do |f|
+    =hidden_field_tag "signup[list_id]", Figaro.env.mailchimp_general_list_id
+    =email_field :signup, :email, placeholder: "Enter your email.", autocomplete: "off", class: "span5"
+    .span2{style: "margin:0"}
+      =f.submit "Sign Up", class: "btn btn-flat-blue pull-left span2", style: "margin-right: 20px"
+    .span2{style: "margin:0"}
+      =render partial: "widgets/twitter"

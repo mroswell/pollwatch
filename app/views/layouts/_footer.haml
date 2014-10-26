@@ -1,0 +1,33 @@
+#footer.clearfix
+  .container
+    .row
+      .col-lg-6
+        %h4=translate "layouts.footer.about_title"
+        %p.p3=translate "layouts.footer.about_body"
+      .col-lg-6
+
+        %h4=translate "layouts.footer.project_sponsors"
+        #row-images
+          =link_to image_tag('ccny-grey2.png', style: "width:32%"), 'http://www.commoncause.org/ny', class: 'ccny-logo'
+          =link_to image_tag('reboot-grey.png', style: "width:32%"), 'http://www.thereboot.org', class: 'reboot-logo'
+          =link_to image_tag('websava-grey.png', style: "width:32%"), 'http://www.websava.com', class: 'websava-logo'
+    .row
+      .col-lg-12
+        %br
+        %br
+        %br
+
+        %hr{style: "border-top:1px solid #DDD; border-bottom: none"}
+        %ul.nav.nav-pills
+          %li=link_to translate("layouts.footer.link1"), "/about", {style: "padding-left: 0"}
+          %li=link_to translate("layouts.footer.link2"), "/viz"
+          %li=link_to translate("layouts.footer.link3"), "http://pollwatchusa.tumblr.com/", {target: "_blank"}
+
+  .row#row-buffer
+    .col-lg-4
+      %br
+      %br
+      %br
+
+=render partial: "widgets/user_voice"
+=render partial: "widgets/google"

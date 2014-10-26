@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    =render "layouts/head"
+  %body{class: "#{page_name}"}
+    #page
+      =render partial: "layouts/header"
+      =render partial: "layouts/flash", locals: {flash: flash}
+      = yield
+      =render partial: "layouts/footer"
+    #javascripts
+      = yield :javascript_includes
+      = javascript_include_tag "application"
+      = yield :javascripts
