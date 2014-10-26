@@ -167,6 +167,11 @@ GEM
       guard (~> 2.2)
     haml (4.0.5)
       tilt
+    haml-rails (0.5.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 3.1, < 5.0)
+      railties (>= 4.0.1)
     hike (1.2.3)
     hirb (0.7.2)
     hitimes (1.2.2)
@@ -455,6 +460,7 @@ DEPENDENCIES
   geocoder
   guard-bundler
   guard-rspec!
+  haml-rails
   i18n-js
   jquery-rails
   jquery-turbolinks

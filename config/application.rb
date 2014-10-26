@@ -35,6 +35,7 @@ module Reboot
   end
   config.assets.raise_production_errors = true
   config.action_dispatch.perform_deep_munge = false
+  config.i18n.default_locale = :'en-US'
 
   config.assets.precompile += %w( application )
   end
