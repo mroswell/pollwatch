@@ -28,7 +28,7 @@ FactoryGirl.define do
           fetch_outside(within,key)
         else
           case key
-          when :lon then Faker::Address.longitude
+          when :lng then Faker::Address.longitude
           when :lat then Faker::Address.latitude
           end
         end

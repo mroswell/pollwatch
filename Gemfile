@@ -16,7 +16,7 @@ gem "bootstrap-sass"
 gem "font-awesome-rails"
 gem "rack-cors", require: "rack/cors"
 gem "kaminari"
-gem "active_model_serializers", "~> 0.8.0"
+gem "active_model_serializers", "~> 0.9.0"
 gem "newrelic_rpm"
 gem "figaro"
 gem "pg_search"
@@ -47,6 +47,7 @@ group :test, :development do
   gem "factory_girl_rails", ">= 4.2.0"
   gem "bullet"
   gem "ruby-progressbar"
+  gem "pry-rails"
 end
 
 group :test do

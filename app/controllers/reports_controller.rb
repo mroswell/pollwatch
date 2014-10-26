@@ -2,8 +2,8 @@ class ReportsController < ApplicationController
   before_action :check_params
 
   def index
-    @polls = Report.current_election_year.all
-    render json: {reports: @polls}
+    @reports = Report.current_election_year.all
+    render json: @reports
   end
 
 
