@@ -1,0 +1,26 @@
+#reportScreen.container{data: {role: "screen"}}
+  .row
+    .renderTarget.col-lg-9.col-lg-offset-1
+#vizScreen{data: {role: "screen"}}
+  #title.container
+    .row#titleRow
+      .col-lg-12
+        %h1.pull-left
+          Reports of Problems at the Polls
+        .mapControls-module.pull-right{style: "margin-top:15px"}
+          %a.pull-right#zoomOutLink{href: "javascript:;", style: "margin-top:5px"}
+            %i.icon-search
+            Zoom out
+  #mapUS
+    .row-fluid{style: "padding: 3px;background: #f1f1f1"}
+      .col-lg-12
+        %article.mapCanvas{style: "height: 300px"}
+        .center{style: "text-align:center"}
+          %small Drag the map to get the latest reports.
+  #main
+    .container
+      #poll.row
+      #reports.row{style: "min-height:300px"}
+        .col-lg-12.center#emptyMsg
+
+  =render partial: "widgets/maps"
