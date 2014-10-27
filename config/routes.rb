@@ -1,3 +1,5 @@
+require "domain_constraint"
+  
 Rails.application.routes.draw do
   get '/reporting' => 'reporting#home'
   resources :reports, except: [:delete, :edit, :update] do

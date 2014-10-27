@@ -36,7 +36,7 @@ module Reboot
   config.assets.raise_production_errors = true
   config.action_dispatch.perform_deep_munge = false
   config.i18n.default_locale = 'en'
-
+  config.autoload_paths += %W(#{config.root}/lib)
   config.assets.precompile += %w( application )
   end
 end
