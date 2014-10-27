@@ -1,29 +1,29 @@
 #_landing.step
   .center=image_tag("/assets/pollwatch300.png", id: "logo")
-  %h4.center=translate('reporting.home.landing.title1')
+  %h4.center=translate('reporting.landing.title1')
 
-  %h3.center=translate('reporting.home.landing.easy')
+  %h3.center=translate('reporting.landing.easy')
   #landingTutorial
     %a.baseBtn.secondaryBtn#findForAddressBtn{href:"#findForAddress"}
       1.
       %span.tutImg.find01{style: "margin-right: 10px; margin-left: 10px"}
 
-      =translate('reporting.home.landing.find')
+      =translate('reporting.landing.find')
     %button.baseBtn.nonBtnLi#voteBtn
       2.
       %span.tutImg.flag{style: "margin-right:10px"}
-      =translate('reporting.home.landing.vote')
+      =translate('reporting.landing.vote')
 
     %button.baseBtn.nonBtnLi#reportWhatYouSaw
       3.
       %span.tutImg.megaphone{style: "margin-right:10px"}
-      =translate('reporting.home.landing.report')
+      =translate('reporting.landing.report')
 
   %p.center#landingCallout
-    =translate('reporting.home.landing.urgent')
+    =translate('reporting.landing.urgent')
 
   -text = capture_haml do
     =image_tag "phone.png", style: "margin-bottom:-5px"
-    =translate('reporting.home.landing.call')
+    =translate('reporting.landing.call')
 
   =link_to text, "tel:2128220282", class: "baseBtn tweetBtn"

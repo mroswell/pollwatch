@@ -1,16 +1,16 @@
 #_manual.step
-  %p=raw translate("reporting.home.manual.prompt")
+  %p=raw translate("reporting.manual.prompt")
   %form#addressForm
     %p
       %label
-        %b=translate("reporting.home.manual.location")
-      =text_field_tag :locationName, "", placeholder: translate("reporting.home.manual.locationPrompt")
+        %b=translate("reporting.manual.location")
+      =text_field_tag :locationName, "", placeholder: translate("reporting.manual.locationPrompt")
     %p
       %label
-        %b=translate("reporting.home.manual.address")
-      =text_field_tag :address, "", placeholder: translate("reporting.home.manual.addressPrompt")
+        %b=translate("reporting.manual.address")
+      =text_field_tag :address, "", placeholder: translate("reporting.manual.addressPrompt")
     %a.baseBtn.primaryBtn#manualEntryBtn{href: "javascript:;"}
-      =translate("reporting.home.manual.continue")
+      =translate("reporting.manual.continue")
 
   .orLine
     %hr
@@ -18,4 +18,4 @@
       %span Or
 
   .center
-    =link_to translate("reporting.home.manual.look_up"), "#findForAddress"
+    =link_to translate("reporting.manual.look_up"), "#findForAddress"
