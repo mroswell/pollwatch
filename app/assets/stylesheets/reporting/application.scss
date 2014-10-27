@@ -1,0 +1,299 @@
+//= require normalize
+//= require jquery.toggle-button
+//= require sticky
+//= require utilities
+//= require list
+//= require buttons
+//= require errors
+//= require_self
+@import "mixins";
+@import "variables";
+
+// ####################################
+// BASE
+// ####################################
+
+body{
+	background: #efefef; font-family: Helvetica;
+	color: #333;
+}
+a{
+	text-decoration:none;
+	color: #999;
+	&:hover{
+		color: #666;
+	}
+}
+hr{
+	border: solid 1px #ddd;
+	background-color: #efefef;
+}
+
+// ####################################
+// PAGES
+// ####################################
+
+#logo{
+	width:200px;
+}
+
+.tutImg{
+	height: 25px;
+	width: 25px;
+	margin-right: 10px;
+	margin-top: -4px;
+	float:left;
+	display:block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	&.flag{
+		background-image: image-url("spriteme1.png");
+		background-position: -13px -90.5px;
+	}
+	&.find01{
+		background-image: image-url("spriteme1.png");
+		background-position: -12px -47.5px;
+	}
+	&.megaphone{
+		background-image: image-url("spriteme1.png");
+		background-position: -14px -133px;
+	}
+}
+
+#landingTutorial{
+	.baseBtn{
+		padding-left:5px;
+		padding-right:5px;
+		min-width:97%;
+
+		&.secondaryBtn{
+			text-align:left;
+			img{
+				margin-left: 7px;
+			}
+		}
+
+		&.nonBtnLi{
+			background:none;
+			border:none;
+			cursor: default;
+			text-align:left;
+			height:2.4em;
+			img{
+				margin-top: 2px;
+
+			}
+		}
+	}
+	i{
+		float:left;
+		margin:0;
+	}
+}
+
+#landingCallout{
+	margin-top:60px;
+}
+
+.content{
+	padding: 0 5px;
+	min-height:500px;
+}
+
+abbr{display: none;}
+
+// Find my poll
+.orLine{
+	width:90%;
+	margin: 30px auto 10px auto;
+	position:relative;
+	.orText{
+		position:relative;
+		top:-9px;
+		span{background:#efefef;}
+	}
+}
+
+// ####################################
+// UI
+// ####################################
+
+.problems{
+	list-style: none;
+	padding:0px 0;
+	border-radius:5px;
+	background:#fefefe;
+	border: solid 1px #999;
+
+	& + h3{
+		margin-bottom:5px;
+	}
+}
+
+.choice{
+	padding:5px 10px 5px 10px;
+	margin:0px 0px 0px 0px;
+	font-size:1.2em;
+	&.checked{
+		background-color:darken(#efefef, 10%);
+	}
+	@include unselectable();
+}
+
+#polls2{
+	margin-top:10px;
+	margin-bottom:30px;
+}
+
+.poll{
+	@include commonContinueBtnStyles();
+	@include unselectable();
+	width:94%;
+	&:last-child{
+		border-bottom:1px solid rgb(204, 204, 204);
+	}
+}
+
+
+// ####################################
+// GLOBAL
+// ####################################
+
+// HEADER
+.header{
+
+	color: #3E3E3E;
+	font-weight: bold;
+	text-shadow: 0 1px 1px white;
+	border: 1px solid #EEE;
+	border-bottom-color: lighten(#B3B3B3, 5%);
+	top: -2px;
+
+	background: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#DDD));
+	background-image: -webkit-linear-gradient(#F0F0F0, #DDD);
+	background-image: linear-gradient(#F0F0F0, #DDD);
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:10px;
+
+	.title{
+		position:relative;
+		min-height: 1.1em;
+		max-width: $maxWidth;
+		text-align: center;
+		font-size: 16px;
+		display: block;
+		margin: .6em 30% .8em;
+		padding: 0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		outline: 0 !important;
+	}
+}
+
+#page{
+	position:relative;
+}
+// FOOTER
+#footer{
+	.innerWrapper{
+		max-width: $maxWidth;
+		margin: 0 auto;
+	}
+}
+
+
+// REPORT
+.reportWrapper{
+	display:none;
+	.report{
+		padding:5px;
+		background:#ccc;
+		border: solid 3px #999;
+	}
+}
+
+.oneMomentWrapper{
+	width:100%;
+	height:120%;
+	background: rgba(50, 50, 50, 0.25);
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+
+	.one_moment{
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		padding: 0px;
+		text-align: center;
+		border: solid 1px #CCC;
+		background: #efefef image-url("ajax-loader.gif") center center no-repeat;
+	}
+}
+
+.step{
+	display: none;
+	max-width: $maxWidth;
+	margin: 0 auto;
+	&.current{ display: block; }
+
+	&.loadingStep{
+		height:400px;
+		background: #efefef image-url("ajax-loader.gif") center center no-repeat;
+	}
+
+	// Form fiels
+	[type='text'],[type='tel'],[type='email'],[type='search']{
+		-webkit-appearance: none;
+		padding: .4em 0 .4em .4em;
+		width:98%;
+		line-height: 1.4;
+		outline: 0;
+		border-radius: 5px;
+		border:solid 1px #ccc;
+		margin-bottom:0 !important;
+	}
+	.inline-hints{
+		margin-left:0;
+	}
+	.textarea{
+		width:97%;
+		min-height:70px;
+		border: solid 1px #ccc;
+		outline: 0;
+		border-radius: 5px;
+		padding: 5px;
+		resize: none;
+	}
+}
+
+#contactMethodBtn{
+	margin-top:10px;
+	.labelLeft{
+		background: image-url("spriteme1.png") center center no-repeat;
+		background-position: 2px -177px;
+		text-indent: -99em;
+	}
+	.labelRight{
+		background: image-url("spriteme1.png") center center no-repeat;
+		background-position: 2.5px -218.5px;
+		text-indent: -99em;
+	}
+}
+#skipContactMethod{
+	float:right;
+	margin-top:10px;
+	margin-right:5px;
+}
+
+//
+@media screen and (max-device-width: 500px){
+	legend.label{
+		margin: 0.4em 0 40px !important;
+		padding:0 !important;
+	}
+}

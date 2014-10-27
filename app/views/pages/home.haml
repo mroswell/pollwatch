@@ -11,7 +11,7 @@
             =translate "pages.home.tagline"
       .home-calloutBtns-module.clearfix.addThinDarkLineTop{style: "padding-top: 5px;margin-top:204px"}
         =link_to translate("pages.home.cta1"), "/viz", class: "btn btn-flat-red pull-right span2", style: "margin-left:5px"
-        =link_to translate("pages.home.cta2"), "http://pollwatch.us", target: "_blank", class: "btn btn-flat-red span2 pull-right", style: "margin-left:5px"
+        =link_to translate("pages.home.cta2"), ENV['REPORTING_APP'], target: "_blank", class: "btn btn-flat-red span2 pull-right", style: "margin-left:5px"
 
       .share-widgets-module.clearfix
         #shareWidgets.pull-right=render partial: "widgets/share"

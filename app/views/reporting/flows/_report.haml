@@ -1,0 +1,70 @@
+#_report.step
+  %ul.problems
+    %li.choice
+      =check_box_tag :voteinplace, 0
+      %label=translate("reporting.home.report.problem1")
+    %li.choice
+      =check_box_tag :cantvote, 1
+      %label=translate("reporting.home.report.problem2")
+    %li.choice
+      =check_box_tag :machine_not_working, 2
+      %label=translate("reporting.home.report.problem3")
+    %li.choice
+      =check_box_tag :language, 3
+      %label=translate("reporting.home.report.problem4")
+    %li.choice
+      =check_box_tag :time, 4
+      %label=translate("reporting.home.report.problem5")
+  %h3
+    %small
+      %i=translate("reporting.home.report.title")
+  =text_area_tag :comment, "", class: "input textarea", placeholder: translate("reporting.home.report.commentPrompt")
+  =link_to translate("reporting.home.manual.continue"), "javascript:;", class: "center primaryBtn baseBtn", id: "continueReportBtn"
+
+#_report01.step
+
+  %p
+    =translate("reporting.home.report.title2")
+
+  #timeHappenedView
+    =select_tag(:timeHappened, options_for_select([["Just now"],["6-8 AM"],["8-10 AM"],["10AM-12PM"],["12-2PM"],["2-4PM"],["4-6PM"],["6-8PM"]]), default: "Just now")
+
+  %p
+    =translate("reporting.home.report.follow_up")
+
+    %b=translate("reporting.home.report.how")
+  #contactMethodView
+    =phone_field_tag :phoneNumber, "", placeholder: translate("reporting.home.report.phone"), class: "contactMethodField"
+
+    #contactMethodBtn.toggle-button
+      =check_box_tag :contactMethod, "", html: {checked: "checked"}
+    =link_to translate("reporting.home.report.skip"), "javascript:;", id: "skipContactMethod"
+
+  =link_to translate("reporting.home.report.done"), "javascript:;", class: "center primaryBtn baseBtn", id: "doneBtn"
+  %small
+    %p
+      =raw translate("reporting.home.report.note")
+
+
+#_report02.step
+  .center
+    %h1=translate("reporting.home.report.thanks")
+    %p
+      =translate("reporting.home.report.see")
+
+    -tweet = capture_haml do
+      %span
+        %i
+        Tweet your report
+    %b
+      =translate("reporting.home.report.democracy")
+
+      %p=link_to "see how", "#about"
+    =link_to tweet, "https://twitter.com/intent/tweet?text=I%20just%20reported%20my%20voting%20experience%20with%20@PollwatchUSA%20Do%20the%20same:%20http://pollwatch.us", target: "_blank", class: "tweetBtn baseBtn"
+    %p
+      %b.center=translate("reporting.home.report.concerns")
+    =link_to translate("reporting.home.report.hotline"), "tel:2126916421", class: 'dangerBtn baseBtn'
+
+
+
+

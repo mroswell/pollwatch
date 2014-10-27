@@ -1,0 +1,59 @@
+.horizontal-list{
+    margin:0 auto;
+        padding:0;
+        display:inline-block;
+        list-style:none;
+        li{
+            margin:0 10px 0 0;padding:0;float:left;
+            border-right: solid 1px #999;
+            padding-right:10px;
+            &:last-child{border:0;
+        }
+    }
+}
+
+// Custom list elements
+
+/*
+    Hide the original radios and checkboxes
+    (but still accessible)
+
+    :not(#foo) > is a rule filter to block browsers
+                 that don't support that selector from
+                 applying rules they shouldn't
+
+*/
+li:not(#foo) > input[type='radio'],
+li:not(#foo) > input[type='checkbox'] {
+
+    /* Hide the input, but have it still be clickable */
+    opacity: 0;
+    display:none;
+    float: left;
+    width: 18px;
+}
+
+
+li:not(#foo) > input[type='radio'] + label,
+li:not(#foo) > input[type='checkbox'] + label {
+    margin: 0;
+    clear: none;
+
+    /* Left padding makes room for image */
+    padding: 5px 0 4px 24px;
+
+    /* Make look clickable because they are */
+    cursor: pointer;
+
+    background: image-url("off.png") left center no-repeat;
+}
+
+/*
+    Change from unchecked to checked graphic
+*/
+li:not(#foo) > input[type='radio']:checked + label {
+    background-image: image-url("radio.png");
+}
+li:not(#foo) > input[type='checkbox']:checked + label {
+    background-image: image-url("check.png");
+}

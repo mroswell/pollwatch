@@ -1,0 +1,139 @@
+.baseBtn{
+	background-color:rgb(248, 248, 248);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(white),to(rgb(222, 222, 222)));
+
+
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+
+	cursor: pointer;
+	padding: .7em 25px .7em 25px;
+	// border-bottom: none;
+	// border: 1px solid;
+	border:rgb(204, 204, 204) solid 1px;
+	border-radius:5px;
+
+	color: black;
+	&:hover{color:black;}
+	text-shadow: none;
+	text-align: center;
+	margin: 10px auto;
+	float: none;
+
+	i{
+		background-position: -24px 0;
+		width: 21px;
+		height: 16px;
+		left: 4px;
+		margin-top: -6px;
+	}
+	svg{
+		position:relative;
+		top:4px;
+
+	}
+}
+
+.custom-ui-icon{
+	background-color:#999;
+	background-image: url("spriteme1.png");
+	background-repeat: no-repeat;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	display:block;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	text-indent:-99em;
+	overflow:hidden;
+
+	position:absolute;
+	top:10px;
+}
+
+.custom-ui-left{
+	background-position: -550px -10px;
+	left:10px;
+}
+
+.custom-ui-right{
+	background-position: -586px -11px;
+	right:10px;
+}
+
+.primaryBtn{
+	border-color: #E78F08;
+	background: #E78F08;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F6A828), to(#E78F08));
+	color: white;
+	text-shadow: 2px 2px black;
+	&:hover{color:white;}
+}
+
+// TODO: make the gradients cross platform;
+.secondaryBtn{
+	// background: #4CA20B;
+	// border-color:#285C00;
+	// background-image: -webkit-gradient(linear, left top, left bottom, from(#45930B), to(#4CA20B));
+	// text-shadow: 2px 2px black;
+	// color: white;
+	// &:hover, &:active{color: white;}
+
+	// twitter bootstrap btn-success styles
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  *background-color: #51a351;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(to bottom, #62c462, #51a351);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: white;
+	&:hover, &:active{
+	  color: #ffffff;
+	  background-color: #51a351;
+	  *background-color: #499249;
+	}
+}
+
+.dangerBtn{
+	border: 1px solid #c1272d;
+  color: white;
+  &:hover{color:white;}
+  text-shadow: 0 1px 0 #444444;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(244, 108, 114)), to(rgb(209, 58, 63)));
+}
+
+.tweetBtn{
+	background-color:rgb(248, 248, 248);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(white),to(rgb(222, 222, 222)));
+	border:rgb(204, 204, 204) solid 1px;
+
+  text-shadow: none;
+	color: black;
+
+
+  span{
+  	position:relative;
+  }
+  i{
+  	position: absolute;
+		top: 50%;
+		left: -24px;
+
+		background: 0 0 no-repeat;
+  	background-image: url("tweet.png");
+  }
+}
+
+.submitBtn{
+	width:100%;
+	display:block;
+	border-bottom: solid 1px #CCC;
+}

@@ -1,0 +1,73 @@
+.container
+  .about-intro-block
+    .row
+      .col-lg-4.clearfix
+        %h2{style: 'margin-top:7px'}=raw translate 'pages.about.title1'
+      .col-lg-7.description
+        %p.p2=raw translate 'pages.about.p1'
+
+        %p.p2
+          =raw translate 'pages.about.p2'
+
+        %p.p2
+          =raw translate 'pages.about.p3'
+    .row
+      .col-lg-4
+        %h2{style: 'margin-top:7px'}=raw translate 'pages.about.title2'
+      .col-lg-7
+        %p.p2
+          =raw translate 'pages.about.p4'
+        =link_to image_tag('latino-justice.jpeg'), 'http://www.latinojustice.org', class: 'partner-logo'
+
+  .row
+    .col-lg-4
+      %h2{style: 'margin-top:7px'}=raw translate 'pages.about.title3'
+    .col-lg-7
+  .row.about-teamMember
+    .col-lg-4
+      %h3 Susan Lerner
+    .col-lg-7
+      %p.p2
+        =raw translate 'pages.about.p5'
+
+  .row.about-teamMember
+    .col-lg-4
+      %h3 Volkan Unsal
+    .col-lg-7
+      %p.p2
+        =raw translate 'pages.about.p6'
+
+
+  .row.about-teamMember
+    .col-lg-4
+      %h3 Jeremy Canfield
+    .col-lg-7
+      %p.p2
+        =raw translate 'pages.about.p7'
+
+  .row.about-teamMember
+    .col-lg-4
+      %h3 Katherine Peters
+    .col-lg-7
+      %p.p2
+        =raw translate 'pages.about.p8'
+
+  .row.about-teamMember
+    .col-lg-4
+      %h3 Alexis Grenell
+    .col-lg-7
+      %p.p2
+        =raw translate 'pages.about.p9'
+  .row
+    .col-lg-4
+      %h2{style: 'margin-top:7px'}=raw translate 'pages.about.title4'
+    .col-lg-8
+      %p.p2
+        =raw translate 'pages.about.p10'
+  .row
+    .col-lg-8.offset4
+      %hr
+      %small
+        Icons by
+        =link_to "The Noun Project", "http://thenounproject.com/"
+      %hr

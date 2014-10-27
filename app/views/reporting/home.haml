@@ -1,0 +1,40 @@
+#main
+  #wrap
+    .header
+      .title
+        PollWatchUSA
+      %a.aboutBtn.custom-ui-icon.custom-ui-left
+        About
+      %a.homeBtn.custom-ui-icon.custom-ui-right
+        Home
+
+    .content
+      #errorFields
+        %ul
+
+      / View starts here.
+      #report
+        / Landing flow
+        =render partial: "reporting/flows/landing"
+
+        / Find your polling site flow
+        =render partial: "reporting/flows/findMyPoll"
+
+        / Report flow
+        =render partial: "reporting/flows/report"
+
+        / About page and Loading page
+        =render partial: "reporting/flows/info"
+
+        / Manual entry flow
+        =render partial: "reporting/flows/manual"
+
+
+
+#footer.center
+  .innerWrapper
+    %ul.horizontal-list
+      %li=link_to "About", "#about"
+      %li=link_to "Report Manually", "#manual"
+      %li=link_to "Call us", "tel:2126916421"
+      %li=link_to "Project Home", "http://pollwatchusa.org/"

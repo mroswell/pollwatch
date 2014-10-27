@@ -1,0 +1,12 @@
+#_findForAddress.step
+  .sites
+  -test_address= "" #"1263 Pacific Ave. Kansas City KS"
+  
+  =text_field_tag :addressField, test_address, placeholder: translate("reporting.home.findMyPoll.addressPrompt"), autocomplete: "on"
+  - findPrompt  = translate "reporting.home.findMyPoll.findPrompt"
+  =link_to findPrompt, "javascript:;", class: "secondaryBtn baseBtn", id: "findMyPollingPlace", "data-loading-text"=> "Please wait..."
+  .orLine
+    %hr
+    .orText.center
+      %span=translate "reporting.home.findMyPoll.or"
+  .center=link_to translate("reporting.home.findMyPoll.manual"), "#manual"

@@ -1,0 +1,21 @@
+#_manual.step
+  %p=raw translate("reporting.home.manual.prompt")
+  %form#addressForm
+    %p
+      %label
+        %b=translate("reporting.home.manual.location")
+      =text_field_tag :locationName, "", placeholder: translate("reporting.home.manual.locationPrompt")
+    %p
+      %label
+        %b=translate("reporting.home.manual.address")
+      =text_field_tag :address, "", placeholder: translate("reporting.home.manual.addressPrompt")
+    %a.baseBtn.primaryBtn#manualEntryBtn{href: "javascript:;"}
+      =translate("reporting.home.manual.continue")
+
+  .orLine
+    %hr
+    .orText.center
+      %span Or
+
+  .center
+    =link_to translate("reporting.home.manual.look_up"), "#findForAddress"

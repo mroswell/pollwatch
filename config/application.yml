@@ -1,4 +1,4 @@
-
+  
 # This file is used by the "figaro" gem to allow you to store and use
 # environment variables in the app without having to set them via the
 # command line each time you run the app in development. Another advantage
@@ -11,6 +11,12 @@
 
 SENDER_EMAIL: 'info@example.com'
 
+GOOGLE_KEY: 'AIzaSyC4afmclHu1GvV7YpunKJQ-8EduulAbsMk'
+GOOGLE_CLIENT_ID: '217474556298-gm3kfh6jbt5ascfnr7pt2m1inpqdskom.apps.googleusercontent.com'
+GOOGLE_EMAIL_ADDRESS: '217474556298-gm3kfh6jbt5ascfnr7pt2m1inpqdskom@developer.gserviceaccount.com'
+GOOGLE_FINGERPRINT: "1783b5bb2dad0565b720a12c1003ca06fb2d83d5"
+
+
 ###########################
 #
 # SETTINGS FOR DEVELOPMENT
@@ -19,6 +25,7 @@ SENDER_EMAIL: 'info@example.com'
 development:
   DEFAULT_PER_PAGE: '30'
   MAX_PER_PAGE: '50'
+  REPORTING_APP: '/reporting'
 
 ###############################################################################
 #
@@ -33,6 +40,7 @@ production:
   EXPIRES_IN: '5'
   TLD_LENGTH: '2'
   ENABLE_HTTPS: 'yes'
+  REPORTING_APP: 'http://pollwatch.us'
 
 ###########################################
 #

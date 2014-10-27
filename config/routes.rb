@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get '/reporting' => 'reporting#home'
   resources :reports, except: [:delete, :edit, :update] do
     collection do
       get 'state_of_zip'
@@ -9,8 +9,14 @@ Rails.application.routes.draw do
 
   get "/viz(*screens)" => "pages#viz"
   get "/about" => "pages#about"
-  # Actions
-  post "/signup" => "pages#signup"
+
+
+
+  if Rails.env.production?
+    constraints DomainConstraint.new('pollwatch.us') do
+      root to: 'reporting#home'
+    end
+  end
 
 	root to: 'pages#home'
 end
