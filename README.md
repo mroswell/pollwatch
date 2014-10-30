@@ -1,4 +1,4 @@
 PollwatchUSA
 =========
 
-Pollwatch is a locaiton based election monitoring app.
+Pollwatch is a location-based election monitoring app. It can be run on any smartphone or from a desktop.
