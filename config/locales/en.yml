@@ -2,14 +2,13 @@ en:
   layouts:
     footer:
       about_title: About
-      about_body: "PollWatchUSA is a non-partisan way to crowd source reporting problems at the polls on election day. Our goal is to facilitate solving those problems as quickly as possible so that any voter who wants to vote is able to do so easily. It is a joint project of Common Cause/NY, Reboot and Websa and won first prize at the Civic Engagement Hackathon sponsored by the Personal Democracy Forum in June, 2012."
+      about_body: "PollWatchUSA is a non-partisan way to crowdsource reporting problems at the polls on election day. Our goal is to facilitate solving those problems as quickly as possible so that any voter who wants to vote is able to do so easily. It is a joint project of Common Cause/NY, Reboot and WebSava and won first prize at the Civic Engagement Hackathon sponsored by the Personal Democracy Forum in June, 2012."
       project_sponsors: Project Sponsors
       link1: About
       link2: Results Map
       link3: Blog
   reporting:
     manual:
-      prompt: "Enter the address of the <b>polling place</b> for which to file the report."
       prompt: "Enter the address of the <b>polling place</b> for which to file the report."
       location: "Location name"
       locationPrompt: "Enter polling location name"
@@ -29,7 +28,7 @@ en:
     findMyPoll:
       addressPrompt: "Enter your home address"
       findPrompt: "Find your polling place"
-      or: "Or"
+      or: "or"
       manual: "Report Manually"
     report:
       problem1: "It was difficult to enter the polling place"
@@ -45,7 +44,7 @@ en:
       phone: "Enter a phone number"
       skip: "Skip"
       done: "Done"
-      note: "Worth noting: Pollwatch is a non-partisan organization. We won't sell your information and only use it to contact you if we need to follow up n an issue you had while voting. We may share it with our non-partisan sister organization, Election Protection."
+      note: "Worth noting: PollWatch is a non-partisan organization. We won't sell your information and only use it to contact you if we need to follow up n an issue you had while voting. We may share it with our non-partisan sister organization, Election Protection."
       thanks: "Thank you!"
       see: "You can see your anonymized report at pollwatchusa.org."
       democracy: "You've just helped improve our democracy."
@@ -76,7 +75,7 @@ en:
       title4: Alumni Credits
       p1: "PollWatchUSA is a non-partisan way to crowd source reporting problems at the polls on election day. When a voter uses PollWatchUSA to report a problem, it's mapped on our website and reported to the relevant election administration. The data we collect is open and accessible through an API."
       p2: "Our goal is to facilitate solving those problems as quickly as possible so that any voter who wants to vote is able to do so easily."
-      p3: "PollWatch USA is a joint project of <a href='http://www.commoncause.org/ny'>Common Cause/NY</a>, <a href='http://thereboot.org'>Reboot</a> and <a href='http://www.volkanunsal.com'>Volkan Unsal</a> and won first prize at the Civic Engagement Hackathon sponsored by the Personal Democracy Forum in June, 2012."
+      p3: "PollWatchUSA is a joint project of <a href='http://www.commoncause.org/ny'>Common Cause/NY</a>, <a href='http://thereboot.org'>Reboot</a> and <a href='http://www.volkanunsal.com'>Volkan Unsal</a> and won first prize at the Civic Engagement Hackathon sponsored by the Personal Democracy Forum in June, 2012."
       p4: "Pollwatch is incredibly grateful for the work of its partners:"
       p5: "Susan Lerner is the Executive Director of <a href='http://www.commoncause.org/ny'>Common Cause/NY</a>. She speaks and writes extensively on redistricting and campaign finance reform. Currently, she is a founding member of a new coalition, NY Women Vote, to educate and mobilize women to participate in the democratic process. She is the project sponsor, instigator, partner wrangler, and brings her deep knowledge of electoral reform to make sure that the solutions we devise are focused on the core problem."
       p6: "Volkan is a software craftsman, a hackathon junkie, and enjoys nothing more than working with small and extraordinary teams who are making a dent in the universe. He's our ace developer and the reason that pollwatch is fast, reliable and exists as more than some scribbles on paper."
@@ -90,6 +89,6 @@ en:
       tagline: Report on what went well and what didn't from any smartphone.
       cta1: See the Results
       cta2: Get Started
-      sms: If you text @pollwatchusa to 23559, we'll send you a reminder to use Pollwatch on Election Day.
+      sms: If you text @pollwatchusa to 23559, we'll send you a reminder to use PollWatch on Election Day.
       cta3: See the map of results
-      get_updates: Get updates from Pollwatch
+      get_updates: Get updates from PollWatch
